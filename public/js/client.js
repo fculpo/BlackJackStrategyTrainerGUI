@@ -10,12 +10,27 @@ bjt.socket.on('id', function(data) {
 
 bjt.socket.on('updateBoard', function(data) {
   console.log(data);
-  /*
-  $('.dealer .cards .card1').attr('src', data.dealer.cards[0]);
-  $('.player .hand1 .card1').attr('src', data.players[0].cards[0]);
-  $('.player .hand1 .card2').attr('src', data.players[0].cards[1]);
-  */
-  console.log("ClientID : " + bjt.ClientID);
+  $('#dealer-hand').empty();
+  $('#player-hand').empty();
+  $('#dealer-hand').append("<div class=\"card " + data.dealer.cards[0] + "\"></div>");
+  $('#player-hand').append("<div class=\"card " + data.players[0].cards[0] + "\"></div>");
+  $('#player-hand').append("<div class=\"card " + data.players[0].cards[1] + "\"></div>");
+});
+
+$('#hit-btn').click(function() {
+  bjt.socket.emit('hit');
+});
+
+$('#stand-btn').click(function() {
+  bjt.socket.emit('stand');
+});
+
+$('#split-btn').click(function() {
+  bjt.socket.emit('split');
+});
+
+$('#double-btn').click(function() {
+  bjt.socket.emit('double');
 });
 
 
