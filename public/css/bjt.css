@@ -1,0 +1,108 @@
+.cardstack, .hand {
+  position: relative;
+  height: 20em;
+  overflow: auto;
+}
+
+.card {
+  height: 8.85em;
+  width: 6.4em;
+  background: #fff url('/cards/deck.png') no-repeat;
+  background-size: 1300% 500%;
+  border: 1px solid #695d39;
+  -webkit-border-radius:  .5em;
+  -moz-border-radius:     .5em;
+  border-radius:          .5em;
+  -webkit-box-shadow:   0 0 .5em -.15em #000;
+  -moz-box-shadow:      0 0 .5em -.15em #000;
+  box-shadow:           0 0 .5em -.15em #000;
+  font-family: 'Times', serif;
+  text-align: left;
+  line-height: 1em;
+  padding-top: .25em;
+  padding-left: .1em;
+  letter-spacing: -.2em;
+  position: absolute;
+}
+
+/* Blank card for the demo */
+.demo   {background-image: none; color: #890000;}
+
+/* Lay out cards in a stack */
+.card:nth-of-type(1) { left: 0; }
+.card:nth-of-type(2) { left: 7em; }
+.card:nth-of-type(3) { left: 14em; }
+.card:nth-of-type(4) { left: 21em; }
+.card:nth-of-type(5) { left: 28em; }
+
+.hand .card:nth-of-type(1) { left: 0; }
+.hand .card:nth-of-type(2) { top: 2em; left: 2em; }
+.hand .card:nth-of-type(3) { top: 4em; left: 4em; }
+.hand .card:nth-of-type(4) { left: 6em; }
+.hand .card:nth-of-type(5) { left: 8em; }
+.hand .card:nth-of-type(6) { left: 10em; }
+.hand .card:nth-of-type(7) { left: 12em; }
+.hand .card:nth-of-type(8) { left: 14em; }
+.hand .card:nth-of-type(9) { left: 16em; }
+.hand .card:nth-of-type(10) { left: 18em; }
+.hand .card:nth-of-type(11) { left: 20em; }
+.hand .card:nth-of-type(12) { left: 22em; }
+.hand .card:nth-of-type(13) { left: 24em; }
+
+/* For FF compatibility: */
+.rankAC {background-position: 0 0; }
+.rank2C {background-position: 8.333% 0; }
+.rank3C {background-position: 16.667% 0; }
+.rank4C {background-position: 25% 0; }
+.rank5C {background-position: 33.333% 0; }
+.rank6C {background-position: 41.667% 0; }
+.rank7C {background-position: 50% 0; }
+.rank8C {background-position: 58.333% 0; }
+.rank9C {background-position: 66.667% 0; }
+.rank10C {background-position: 75% 0; }
+.rankJC {background-position: 83.333% 0; }
+.rankQC {background-position: 91.667% 0; }
+.rankKC {background-position: 100% 0;  }
+
+.rankAH {background-position: 0 25%; }
+.rank2H {background-position: 8.333% 25%; }
+.rank3H {background-position: 16.667% 25%; }
+.rank4H {background-position: 25% 25%; }
+.rank5H {background-position: 33.333% 25%; }
+.rank6H {background-position: 41.667% 25%; }
+.rank7H {background-position: 50% 25%; }
+.rank8H {background-position: 58.333% 25%; }
+.rank9H {background-position: 66.667% 25%; }
+.rank10H {background-position: 75% 25%; }
+.rankJH {background-position: 83.333% 25%; }
+.rankQH {background-position: 91.667% 25%; }
+.rankKH {background-position: 100% 25%; }
+
+.rankAD {background-position: 0 75%; }
+.rank2D {background-position: 8.333% 75%; }
+.rank3D {background-position: 16.667% 75%; }
+.rank4D {background-position: 25% 75%; }
+.rank5D {background-position: 33.333% 75%; }
+.rank6D {background-position: 41.667% 75%; }
+.rank7D {background-position: 50% 75%; }
+.rank8D {background-position: 58.333% 75%; }
+.rank9D {background-position: 66.667% 75%; }
+.rank10D {background-position: 75% 75%; }
+.rankJD {background-position: 83.333% 75%; }
+.rankQD {background-position: 91.667% 75%; }
+.rankKD {background-position: 100% 75%; }
+
+.rankAS {background-position: 0 50%; }
+.rank2S {background-position: 8.333% 50%; }
+.rank3S {background-position: 16.667% 50%; }
+.rank4S {background-position: 25% 50%; }
+.rank5S {background-position: 33.333% 50%; }
+.rank6C {background-position: 41.667% 0; }
+.rank6S {background-position: 41.667% 50%; }
+.rank7S {background-position: 50% 50%; }
+.rank8S {background-position: 58.333% 50%; }
+.rank9S {background-position: 66.667% 50%; }
+.rank10S {background-position: 75% 50%; }
+.rankJS {background-position: 83.333% 50%; }
+.rankQS {background-position: 91.667% 50%; }
+.rankKS {background-position: 100% 50%; }

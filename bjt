@@ -1,0 +1,6 @@
+#!/usr/bin/env node
+
+var BJT = require('./lib/bjt');
+
+var bjt = new BJT();
+bjt.start();

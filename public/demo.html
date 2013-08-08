@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>BlackJack Trainer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="css/bjt.css" rel="stylesheet" media="screen">
+    <style type="text/css">
+      body {
+        padding-top: 70px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="container" style="width: auto;">
+        <a class="navbar-brand" href="#">BlackJack Trainer</a>
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Home</a></li>
+          <li class="active"><a href="#"><b>Demo</b></a></li>
+          <li><a href="#">Link</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-6 hand">
+        <div class="card rankAC"></div>
+        <div class="card rank2C"></div>
+        <div class="card rank3C"></div>
+        <div class="card rank4C"></div>
+        <div class="card rank5C"></div>
+        <div class="card rank6C"></div>
+        <div class="card rank7C"></div>
+        <div class="card rank8C"></div>
+        <div class="card rank9C"></div>
+        <div class="card rank10C"></div>
+        <div class="card rankJC"></div>
+        <div class="card rankQC"></div>
+        <div class="card rankKC"></div>
+      </div>
+      <div class="col-lg-6 hand">
+        <div class="card rankAH"></div>
+        <div class="card rank2H"></div>
+        <div class="card rank3H"></div>
+        <div class="card rank4H"></div>
+        <div class="card rank5H"></div>
+        <div class="card rank6H"></div>
+        <div class="card rank7H"></div>
+        <div class="card rank8H"></div>
+        <div class="card rank9H"></div>
+        <div class="card rank10H"></div>
+        <div class="card rankJH"></div>
+        <div class="card rankQH"></div>
+        <div class="card rankKH"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 hand">
+        <div class="card rankAD"></div>
+        <div class="card rank2D"></div>
+        <div class="card rank3D"></div>
+        <div class="card rank4D"></div>
+        <div class="card rank5D"></div>
+        <div class="card rank6D"></div>
+        <div class="card rank7D"></div>
+        <div class="card rank8D"></div>
+        <div class="card rank9D"></div>
+        <div class="card rank10D"></div>
+        <div class="card rankJD"></div>
+        <div class="card rankQD"></div>
+        <div class="card rankKD"></div>
+      </div>
+      <div class="col-lg-6 hand">
+        <div class="card rankAS"></div>
+        <div class="card rank2S"></div>
+        <div class="card rank3S"></div>
+        <div class="card rank4S"></div>
+        <div class="card rank5S"></div>
+        <div class="card rank6S"></div>
+        <div class="card rank7S"></div>
+        <div class="card rank8S"></div>
+        <div class="card rank9S"></div>
+        <div class="card rank10S"></div>
+        <div class="card rankJS"></div>
+        <div class="card rankQS"></div>
+        <div class="card rankKS"></div>
+      </div>
+    </div>
+
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/js/lib/bootstrap.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/client.js"></script>
+
+    <!-- Optionally enable responsive features in IE8 -->
+    <script src="/js/respond.js"></script>
+  </body>
+</html>
