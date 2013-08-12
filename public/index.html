@@ -19,44 +19,55 @@
       <div class="container" style="width: auto;">
         <a class="navbar-brand" href="#">BlackJack Trainer</a>
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#"><b>Home</b></a></li>
+          <li class="active"><a href="#"><b>Strategy Trainer</b></a></li>
           <li><a href="demo.html">Demo</a></li>
-          <li><a href="#">Link</a></li>
         </ul>
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-3">
-        DEALER
+      <div class="col-lg-3">DEALER</div>
+      <div class="col-lg-5">
+        <div id="dealer-hand" class="hand"></div>
       </div>
-      <div class="col-lg-9">
-        <div id="dealer-hand" class="hand">
-        </div>
+      <div class="col-lg-4">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <span id="score-span" class="badge"></span>
+            SCORE
+          </li>
+          <li class="list-group-item">
+            <span id="streak-span" class="badge"></span>
+            STREAK
+          </li>
+          <li class="list-group-item">
+            <span id="maxstreak-span" class="badge"></span>
+            MAX STREAK
+          </li>
+          <li class="list-group-item">
+            ANSWER 
+            <span id="answer" style="float: right;"></span>
+          </li>
+        </ul>
       </div>
     </div>
 
     <div class="row">
-      <div class="col-lg-3">
-        PLAYER
-      </div>
+      <div class="col-lg-3">PLAYER</div>
       <div class="col-lg-9">
-        <div id="player-hand" class="hand">
-        </div>
+        <div id="player-hand" class="hand"></div>
       </div>
     </div>
 
     <div class="row">
-      <div class="col-lg-3">
-        CORRECT ACTION:
-      </div>
-      <div class="col-lg-6">
+      <div class="col-lg-3">CHOICE</div>
+      <div class="col-lg-5">
         <button id="hit-btn" type="button" class="btn btn-success">HIT</button>
         <button id="stand-btn" type="button" class="btn btn-danger">STAND</button>
         <button id="double-btn" type="button" class="btn btn-primary">DOUBLE</button>
         <button id="split-btn" type="button" class="btn btn-warning">SPLIT</button>
-        <button id="surrender-btn" type="button" class="btn btn-default">SURRENDER</button>
+        <button id="surrender-hit-btn" type="button" class="btn btn-default">SURRENDER / HIT</button>
+        <button id="surrender-stand-btn" type="button" class="btn btn-default">SURRENDER / STAND</button>
       </div>
-      <div id="answer" class="col-lg-3"></div>
     </div>
 
     <!-- JavaScript plugins (requires jQuery) -->

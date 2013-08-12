@@ -1,7 +1,6 @@
 .cardstack, .hand {
   position: relative;
-  height: 20em;
-  overflow: auto;
+  height: 15em;
 }
 
 .card {
