@@ -10,6 +10,10 @@ bjt.socket.on('id', function (data) {
     console.log("ClientID : " + bjt.ClientID);
 });
 
+bjt.socket.on('set-board-id', function (data) {
+    console.log("ClientID : " + bjt.ClientID);
+});
+
 bjt.socket.on('updateBoard', function (data) {
     //console.log(data);
     $('#answer').empty();
