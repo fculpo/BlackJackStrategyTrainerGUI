@@ -20,7 +20,7 @@ bjt.socket.on('updateBoard', function (data) {
     $('#dealer-hand').empty();
     $('#player-hand').empty();
     $('#player-score').empty();
-    $('#player-score').append("<h3>" + data.players[0].score + "</h3>");
+    $('#player-score').append("<h3>" + data.players[0].strategyscore + " / " + data.players[0].score + "</h3>");
     $('#dealer-hand').append("<div class=\"card " + data.dealer.cards[0] + "\"></div>");
     $('#player-hand').append("<div class=\"card " + data.players[0].cards[0] + "\"></div>");
     $('#player-hand').append("<div class=\"card " + data.players[0].cards[1] + "\"></div>");
