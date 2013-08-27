@@ -1,9 +1,40 @@
+@-moz-keyframes fadeIn {
+    from {opacity:0;}
+    to {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity:0;}
+    to {opacity:1;}
+}
+
+@keyframes fadeIn {
+    from {opacity:0;}
+    to {opacity:1;}
+}
+@-moz-keyframes fadeOut {
+    from {opacity:1;}
+    to {opacity:0;}
+}
+
+@-webkit-keyframes fadeOut {
+    from {opacity:1;}
+    to {opacity:0;}
+}
+@keyframes fadeOut {
+    from {opacity:1;}
+    to {opacity:0;}
+}
+
 .cardstack, .hand {
   position: relative;
   height: 15em;
 }
 
 .card {
+  -webkit-animation: fadeIn 800ms;
+  -moz-animation: fadeIn 800ms;
+  animation: fadeIn 800ms;
   height: 8.85em;
   width: 6.4em;
   background: #fff url('/cards/deck.png') no-repeat;
