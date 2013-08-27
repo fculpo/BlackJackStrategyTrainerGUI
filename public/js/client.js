@@ -3,6 +3,25 @@
 // Client app namespace
 var bjt = {};
 
+
+bjt.disableButtons = function() {
+  $('#hit-btn').prop('disabled', true);
+  $('#stand-btn').prop('disabled', true);
+  $('#split-btn').prop('disabled', true);
+  $('#double-btn').prop('disabled', true);
+  $('#surrender-hit-btn').prop('disabled', true);
+  $('#surrender-stand-btn').prop('disabled', true);
+}
+
+bjt.enableButtons = function() {
+  $('#hit-btn').prop('disabled', false);
+  $('#stand-btn').prop('disabled', false);
+  $('#split-btn').prop('disabled', false);
+  $('#double-btn').prop('disabled', false);
+  $('#surrender-hit-btn').prop('disabled', false);
+  $('#surrender-stand-btn').prop('disabled', false);
+}
+
 bjt.socket = io.connect(null, {port: 3000});
 
 bjt.socket.on('id', function (data) {
@@ -25,6 +44,7 @@ bjt.socket.on('updateBoard', function (data) {
     $('#player-hand').append("<div class=\"card " + data.players[0].cards[0] + "\"></div>");
     $('#player-hand').append("<div class=\"card " + data.players[0].cards[1] + "\"></div>");
     $('#board-id').html(data.board);
+    bjt.enableButtons();
 });
 
 bjt.socket.on('answer', function (data) {
@@ -40,28 +60,36 @@ bjt.socket.on('answer', function (data) {
 });
 
 $('#hit-btn').click(function () {
+    bjt.disableButtons();
     bjt.socket.emit('hit');
 });
 
 $('#stand-btn').click(function () {
+    bjt.disableButtons();
     bjt.socket.emit('stand');
 });
 
 $('#split-btn').click(function () {
+    bjt.disableButtons();
     bjt.socket.emit('split');
 });
 
 $('#double-btn').click(function () {
+    bjt.disableButtons();
     bjt.socket.emit('double');
 });
 
 $('#surrender-hit-btn').click(function () {
+    bjt.disableButtons();
     bjt.socket.emit('surrender-hit');
 });
 
 $('#surrender-stand-btn').click(function () {
+    bjt.disableButtons();
     bjt.socket.emit('surrender-stand');
 });
+
+
 
 console.log("client.js started, joining table");
 
