@@ -26,6 +26,14 @@
     to {opacity:0;}
 }
 
+.navbar-static-top {
+  margin-bottom: 19px;
+}
+
+.row {
+  margin-bottom: 15px;
+}
+
 .cardstack, .hand {
   position: relative;
   height: 15em;

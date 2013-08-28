@@ -7,74 +7,90 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.css" rel="stylesheet" media="screen">
     <link href="css/bjt.css" rel="stylesheet" media="screen">
-    <style type="text/css">
-      body {
-        padding-top: 70px;
-      }
-    </style>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/lib/html5shiv.js"></script>
+      <script src="js/lib/respond.min.js"></script>
+    <![endif]-->
   </head>
 
   <body>
-    <div class="navbar navbar-fixed-top">
+    <div class="navbar navbar-default navbar-static-top">
       <div class="container" style="width: auto;">
-        <a class="navbar-brand" href="#">BlackJack Trainer</a>
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#"><b>Strategy Trainer</b></a></li>
-          <li><a href="demo.html">Demo</a></li>
-          <li><a href="debug.html">Debug</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-3">DEALER</div>
-      <div class="col-lg-5">
-        <div id="dealer-hand" class="hand"></div>
-      </div>
-      <div class="col-lg-4">
-        <ul class="list-group">
-          <li class="list-group-item">
-            <span id="score-span" class="badge"></span>
-            SCORE
-          </li>
-          <li class="list-group-item">
-            <span id="streak-span" class="badge"></span>
-            STREAK
-          </li>
-          <li class="list-group-item">
-            <span id="maxstreak-span" class="badge"></span>
-            MAX STREAK
-          </li>
-          <li class="list-group-item">
-            ANSWER
-            <span id="answer" style="float: right;"></span>
-          </li>
-          <li class="list-group-item">
-            BOARD ID
-            <span id="board-id" style="float: right;"></span>
-          </li>
-        </ul>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">BlackJack Trainer</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#"><b>Strategy Trainer</b></a></li>
+            <li><a href="demo.html">Demo</a></li>
+            <li><a href="debug.html">Debug</a></li>
+          </ul>
+        </div>
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-lg-3">PLAYER</div>
-      <div class="col-lg-6">
-        <span id="player-score"></span>
-        <div id="player-hand" class="hand"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">DEALER</div>
+        <div class="col-md-9">
+          <div id="dealer-hand" class="hand"></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">PLAYER</div>
+        <div class="col-md-3">
+          <span id="player-score"></span>
+          <div id="player-hand" class="hand"></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-3">CHOICE</div>
+        <div class="col-md-9">
+          <button id="hit-btn" type="button" class="btn btn-success">HIT</button>
+          <button id="stand-btn" type="button" class="btn btn-danger">STAND</button>
+          <button id="double-btn" type="button" class="btn btn-primary">DOUBLE</button>
+          <button id="split-btn" type="button" class="btn btn-warning">SPLIT</button>
+          <button id="surrender-btn" type="button" class="btn btn-default">SURRENDER</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <span id="score-span" class="badge"></span>
+              SCORE
+            </li>
+            <li class="list-group-item">
+              <span id="streak-span" class="badge"></span>
+              STREAK
+            </li>
+            <li class="list-group-item">
+              <span id="maxstreak-span" class="badge"></span>
+              MAX STREAK
+            </li>
+            <li class="list-group-item">
+              ANSWER
+              <span id="answer" style="float: right;"></span>
+            </li>
+            <li class="list-group-item">
+              BOARD ID
+              <span id="board-id" style="float: right;"></span>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-lg-3">CHOICE</div>
-      <div class="col-lg-5">
-        <button id="hit-btn" type="button" class="btn btn-success">HIT</button>
-        <button id="stand-btn" type="button" class="btn btn-danger">STAND</button>
-        <button id="double-btn" type="button" class="btn btn-primary">DOUBLE</button>
-        <button id="split-btn" type="button" class="btn btn-warning">SPLIT</button>
-        <button id="surrender-hit-btn" type="button" class="btn btn-default">SURRENDER / HIT</button>
-        <button id="surrender-stand-btn" type="button" class="btn btn-default">SURRENDER / STAND</button>
-      </div>
-    </div>
+
 
     <!-- JavaScript plugins (requires jQuery) -->
     <script src="http://code.jquery.com/jquery.js"></script>
@@ -83,7 +99,5 @@
     <script src="/socket.io/socket.io.js"></script>
     <script src="/js/client.js"></script>
 
-    <!-- Optionally enable responsive features in IE8 -->
-    <script src="/js/respond.js"></script>
   </body>
 </html>

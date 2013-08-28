@@ -79,16 +79,10 @@ $('#double-btn').click(function () {
     bjt.socket.emit('double');
 });
 
-$('#surrender-hit-btn').click(function () {
+$('#surrender-btn').click(function () {
     bjt.disableButtons();
-    bjt.socket.emit('surrender-hit');
+    bjt.socket.emit('surrender');
 });
-
-$('#surrender-stand-btn').click(function () {
-    bjt.disableButtons();
-    bjt.socket.emit('surrender-stand');
-});
-
 
 
 console.log("client.js started, joining table");
