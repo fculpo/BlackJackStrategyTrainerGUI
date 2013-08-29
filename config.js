@@ -1,7 +1,7 @@
 module.exports = {
   debug: true,
 
-  howManyDecks: 1,
+  howManyDecks: 6,
   howManyPlayersMax: 6,
   startingStack: 500,
   penetrationRate: 0.75,
