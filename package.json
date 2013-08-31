@@ -1,25 +1,15 @@
 {
-  "name": "bjt",
+  "name": "BlackJack-Trainer",
   "description": "A browser-based BlackJack Trainer",
-  "keywords": [
-    "blackjack"
-  ],
   "author": "Fabien Culpo <fabien.culpo@gmail.com>",
   "version": "0.2.0",
-  "main": "./lib/bjt.js",
-  "bin": {
-    "bjt": "./bjt"
-  },
   "engines": {
-    "node": ">=0.10.0"
+    "node": "0.10.x",
+    "npm": "1.2.x"
   },
   "dependencies": {
     "express": "3.2.x",
-    "jade": "0.30.x",
     "socket.io": "0.9.x",
     "node-uuid": "1.4.x"
-  },
-  "scripts": {
-    "start": "bjt"
   }
 }
