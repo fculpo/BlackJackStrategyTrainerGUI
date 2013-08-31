@@ -4,7 +4,7 @@
     // Client app namespace
     var bjt_debug = {};
 
-    bjt_debug.socket = io.connect(null, {port: 3000});
+    bjt_debug.socket = io.connect(window.location.hostname);
 
     bjt_debug.socket.on('debug', function (data) {
       console.log(data);

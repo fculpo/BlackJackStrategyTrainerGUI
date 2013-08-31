@@ -12,7 +12,7 @@ module.exports = {
   },
 
   prod: {
-  	port: process.env.PORT || 3000, // Nodester port
+  	port: process.env.PORT || 3000,
     client_port: 80
   }
 };

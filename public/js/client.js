@@ -22,7 +22,7 @@ bjt.enableButtons = function() {
   $('#surrender-stand-btn').prop('disabled', false);
 }
 
-bjt.socket = io.connect(null, {port: 3000});
+bjt.socket = io.connect(window.location.hostname);
 
 bjt.socket.on('id', function (data) {
     bjt.ClientID = data.id;
