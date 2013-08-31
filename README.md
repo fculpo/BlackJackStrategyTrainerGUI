@@ -15,7 +15,7 @@ Installation
         or
         $ node ./bjt (windows)
 
-3. Play on http://<ipaddress>:3000 (by default)
+3. Play on http://\<ipaddress\>:3000 (by default)
 
 Note: As of now, this trainer uses the strategy for the following rules :
 * European BlackJack  (no hole cards)
