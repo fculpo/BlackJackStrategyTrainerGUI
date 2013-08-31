@@ -3,7 +3,6 @@
 // Client app namespace
 var bjt = {};
 
-
 bjt.disableButtons = function() {
   $('#hit-btn').prop('disabled', true);
   $('#stand-btn').prop('disabled', true);
@@ -22,7 +21,7 @@ bjt.enableButtons = function() {
   $('#surrender-stand-btn').prop('disabled', false);
 }
 
-bjt.socket = io.connect(window.location.hostname);
+bjt.socket = io.connect(window.location.hostname, {'sync disconnect on unload' : true});
 
 bjt.socket.on('id', function (data) {
     bjt.ClientID = data.id;
@@ -38,8 +37,6 @@ bjt.socket.on('updateBoard', function (data) {
     $('#answer').empty();
     $('#dealer-hand').empty();
     $('#player-hand').empty();
-    //$('#player-score').empty();
-    //$('#player-score').append("<h3>" + data.players[0].strategyscore + " / " + data.players[0].score + "</h3>");
     $('#dealer-hand').append("<div class=\"card " + data.dealer.cards[0] + "\"></div>");
     $('#player-hand').append("<div class=\"card " + data.players[0].cards[0] + "\"></div>");
     $('#player-hand').append("<div class=\"card " + data.players[0].cards[1] + "\"></div>");
