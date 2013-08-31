@@ -8,8 +8,7 @@ bjt.disableButtons = function() {
   $('#stand-btn').prop('disabled', true);
   $('#split-btn').prop('disabled', true);
   $('#double-btn').prop('disabled', true);
-  $('#surrender-hit-btn').prop('disabled', true);
-  $('#surrender-stand-btn').prop('disabled', true);
+  $('#surrender-btn').prop('disabled', true);
 }
 
 bjt.enableButtons = function() {
@@ -17,8 +16,7 @@ bjt.enableButtons = function() {
   $('#stand-btn').prop('disabled', false);
   $('#split-btn').prop('disabled', false);
   $('#double-btn').prop('disabled', false);
-  $('#surrender-hit-btn').prop('disabled', false);
-  $('#surrender-stand-btn').prop('disabled', false);
+  $('#surrender-btn').prop('disabled', false);
 }
 
 bjt.socket = io.connect(window.location.hostname, {'sync disconnect on unload' : true});
