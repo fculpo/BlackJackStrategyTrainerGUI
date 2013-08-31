@@ -17,6 +17,11 @@ Installation
 
 3. Play on http://\<ipaddress\>:3000 (by default)
 
+DEMO
+----
+
+A live demo is available at : http://obscure-ocean-6731.herokuapp.com/
+
 Note: As of now, this trainer uses the strategy for the following rules :
 * European BlackJack  (no hole cards)
 * S17
