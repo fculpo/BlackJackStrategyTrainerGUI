@@ -12,21 +12,19 @@ bjt.buttonsToActionMap = {
 }
 
 bjt.blinkButton = function (button) {
-
-    button.removeClass().addClass("btn btn-success");
+  button.removeClass().addClass("btn btn-success");
+  setTimeout(function() {
+    button.removeClass().addClass("btn btn-default");
     setTimeout(function() {
-      button.removeClass().addClass("btn btn-default");
+      button.removeClass().addClass("btn btn-success");
       setTimeout(function() {
-        button.removeClass().addClass("btn btn-success");
+        button.removeClass().addClass("btn btn-default");
         setTimeout(function() {
-          button.removeClass().addClass("btn btn-default");
-          setTimeout(function() {
-            button.removeClass().addClass("btn btn-success");
-          }, 150);
+          button.removeClass().addClass("btn btn-success");
         }, 150);
       }, 150);
     }, 150);
-
+  }, 150);
 }
 
 bjt.disableButtons = function() {
@@ -117,9 +115,7 @@ $('#surrender-btn').click(function () {
     bjt.socket.emit('surrender');
 });
 
-
 console.log("client.js started, joining table");
 
-// TEST
 //bjt.socket.emit('joinTable', { pos: (Math.floor(Math.random() * 6) + 1) });
 bjt.socket.emit('joinTable', { pos: 1 });
