@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BlackJack Trainer :: Hi-Lo Card Counting</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="css/bjt.css" rel="stylesheet" media="screen">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/lib/html5shiv.js"></script>
+      <script src="js/lib/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar navbar-default navbar-static-top">
+      <div class="container" style="width: auto;">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">BlackJack Trainer</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Strategy Trainer (6 decks, S17, DoA, DAS, ENHC)</a></li>
+            <li class="active"><a href="#"><b>Card Counting</b></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-4"><h4><span class="label label-default">CARDS</span></h4></div>
+        <div class="col-md-4">
+          <div id="cards" class="hand"></div>
+        </div>
+        <div class="col-md-4">
+          <div id="player-count"></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div id="answer"></div>
+      </div>
+
+    </div>
+
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/js/lib/bootstrap.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/countClient.js"></script>
+
+  </body>
+</html>
