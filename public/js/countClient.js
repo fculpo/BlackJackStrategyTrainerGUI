@@ -3,7 +3,7 @@
 // Client app namespace
 var bjt = {};
 
-bjt.socket = io.connect(window.location.hostname, {'sync disconnect on unload' : true});
+bjt.socket = io.connect(window.location.hostname);
 
 bjt.blinkButton = function (button) {
   button.removeClass().addClass("btn btn-success");
@@ -40,14 +40,13 @@ bjt.socket.on('cards', function (data) {
 
 bjt.socket.on('updateBoard', function (data) {
     //console.log(data);
-    $('#answer').empty();
-    $('#dealer-hand').empty();
-    $('#player-hand').empty();
-    $('#dealer-hand').append("<div class=\"card " + data.dealer.cards[0] + "\"></div>");
-    $('#player-hand').append("<div class=\"card " + data.players[0].cards[0] + "\"></div>");
-    $('#player-hand').append("<div class=\"card " + data.players[0].cards[1] + "\"></div>");
+    $('#cards').empty();
+    data.players[0].hand.forEach(function(card) {
+      $('#cards').append("<div class=\"card " + card + "\"></div>");
+    });
+    $('#runningCount').html(data.count);
     $('#board-id').html(data.board);
-    bjt.enableButtons();
+    //bjt.enableButtons();
 });
 
 bjt.socket.on('answer', function (data) {
@@ -68,4 +67,4 @@ $('#send-btn').click(function () {
     bjt.socket.emit('send-answer');
 });
 
-bjt.socket.emit('joinTable', { pos: 1 });
+bjt.socket.emit('joinTable', { pos: 1, mode: "count" });
