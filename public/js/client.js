@@ -53,7 +53,7 @@ bjt.enableButtons = function() {
   $('#surrender-btn').removeClass().addClass("btn btn-default");
 }
 
-bjt.socket = io.connect(window.location.hostname, {'sync disconnect on unload' : true});
+bjt.socket = io.connect(window.location.hostname);
 
 bjt.socket.on('id', function (data) {
     bjt.ClientID = data.id;
@@ -61,17 +61,17 @@ bjt.socket.on('id', function (data) {
 });
 
 bjt.socket.on('set-board-id', function (data) {
-    console.log("ClientID : " + bjt.ClientID);
+    console.log("BoardID : " + data.boardID);
 });
 
 bjt.socket.on('updateBoard', function (data) {
-    //console.log(data);
+    console.log(data);
     $('#answer').empty();
     $('#dealer-hand').empty();
     $('#player-hand').empty();
     $('#dealer-hand').append("<div class=\"card " + data.dealer.cards[0] + "\"></div>");
-    $('#player-hand').append("<div class=\"card " + data.players[0].cards[0] + "\"></div>");
-    $('#player-hand').append("<div class=\"card " + data.players[0].cards[1] + "\"></div>");
+    $('#player-hand').append("<div class=\"card " + data.players[0].hand[0] + "\"></div>");
+    $('#player-hand').append("<div class=\"card " + data.players[0].hand[1] + "\"></div>");
     $('#board-id').html(data.board);
     bjt.enableButtons();
 });
