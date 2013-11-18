@@ -4,6 +4,7 @@
 var bjt = {};
 
 bjt.socket = io.connect(window.location.hostname);
+$('#runningCount').hide();
 
 bjt.blinkButton = function (button) {
   button.removeClass().addClass("btn btn-success");
@@ -19,10 +20,6 @@ bjt.blinkButton = function (button) {
       }, 150);
     }, 150);
   }, 150);
-}
-
-bjt.enableButtons = function () {
-
 }
 
 bjt.socket.on('id', function (data) {
@@ -62,9 +59,8 @@ bjt.socket.on('answer', function (data) {
     $('#maxstreak-span').html(data.score.maxStreak);
 });
 
-$('#send-btn').click(function () {
-    bjt.disableButtons();
-    bjt.socket.emit('send-answer');
+$('#show-btn').click(function () {
+  $('#runningCount').toggle('show');
 });
 
 bjt.socket.emit('joinTable', { pos: 1, mode: "count" });
