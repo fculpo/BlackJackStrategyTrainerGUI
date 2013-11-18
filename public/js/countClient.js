@@ -61,6 +61,7 @@ bjt.socket.on('answer', function (data) {
 
 $('#show-btn').click(function () {
   $('#runningCount').toggle('show');
+  $('#show-btn').html($('#show-btn').html() == 'SHOW COUNT' ? 'HIDE COUNT' : 'SHOW COUNT');
 });
 
 bjt.socket.emit('joinTable', { pos: 1, mode: "count" });
