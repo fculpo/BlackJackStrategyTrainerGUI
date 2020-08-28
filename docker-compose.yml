@@ -1,4 +1,4 @@
-version: '2'
+version: "2"
 
 services:
   bj:
@@ -6,6 +6,3 @@ services:
     image: fculpo/bj
     ports:
       - "3000:3000"
-    volumes:
-      - .:/usr/src/app
-      - /usr/src/app/node_modules
