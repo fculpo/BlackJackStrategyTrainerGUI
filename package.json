@@ -4,7 +4,7 @@
   "author": "Fabien Culpo <fabien.culpo@gmail.com>",
   "version": "0.3.0",
   "dependencies": {
-    "express": "4.17.1",
+    "express": "4.17.3",
     "socket.io": "0.9.x",
     "node-uuid": "1.4.x",
     "winston": "3.3.3"
